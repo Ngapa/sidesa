@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 use Nette\Utils\DateTime;
 use App\Models\DanaMasuk;
 use App\Models\DanaKeluar;
+// use PDF;
+use \Barryvdh\DomPDF\Facade\Pdf;
+
 
 class DanaController extends Controller
 {
@@ -68,7 +71,7 @@ class DanaController extends Controller
         $danaMasuk = DanaMasuk::where('dana_id', $dana->id)->get();
         $danaKeluar = DanaKeluar::where('dana_id', $dana->id)->get();
         $title = 'Dana';
-        return view('admin.dana.show', compact('title', 'dana','danaMasuk','danaKeluar'));
+        return view('admin.dana.show', compact('title', 'dana', 'danaMasuk', 'danaKeluar'));
     }
 
     /**
@@ -129,5 +132,25 @@ class DanaController extends Controller
         }
 
         return redirect('/admin/dana')->with('' . $tes . '', 'Data ' . $dana->nama . ' ' . $pesan . '');
+    }
+
+    public function landingPage()
+    {
+        $danas = Dana::all();
+        $danaKeluar = DanaKeluar::all();
+        $title = "Dana Desa";
+        return view('landing-page.dana', compact('title', 'danas', 'danaKeluar'));
+    }
+
+    // domPDF
+    public function danaPDF()
+    {
+        $danas = Dana::orderBy('id', 'DESC')->get();
+        $danaMasuk = DanaMasuk::orderBy('id', 'DESC')->get();
+        $danaKeluar = DanaKeluar::orderBy('id', 'DESC')->get();
+        $title = 'Ekspoort PDF';
+        $date = date('d/M/Y');
+        $pdf = PDF::loadView('admin.dana.pdf', ['danas' => $danas, 'danaMasuk' => $danaMasuk,'danaKeluar' => $danaKeluar]);
+        return $pdf->download('Dana-' . $date . '.pdf');
     }
 }

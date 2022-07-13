@@ -14,8 +14,8 @@
                 Tambah Data
             </a>
             <div class="btn-group ms-2 ms-lg-3">
-                <button type="button" class="btn btn-sm btn-outline-gray-600">Share</button>
-                <button type="button" class="btn btn-sm btn-outline-gray-600">Export</button>
+                <a href="{{ url('/admin/dana')}}" type="button" class="btn btn-sm btn-success"><i class="lni lni-wallet me-2"></i> Ke Menu Dana</a>
+                {{-- <button type="button" class="btn btn-sm btn-outline-gray-600">Export</button> --}}
             </div>
         </div>
     </div>
@@ -50,7 +50,7 @@
                     <tbody>
                         @foreach ($dana_masuks as $dm)
                             <!-- Item -->
-                            
+
                             <tr>
                                 <td><a href="#" class="text-primary fw-bold">{{ ++$i }}</a></td>
                                 <td>{{ $dm->dana->nama }}</td>

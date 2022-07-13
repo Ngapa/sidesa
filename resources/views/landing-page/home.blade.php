@@ -26,7 +26,8 @@
                             </div>
                             <!-- End Single Slider -->
                             <!-- Start Single Slider -->
-                            <div class="single-slider" style="background-image: url(./assets/images/hero/slide2.png);">
+                            <div class="single-slider"
+                                style="background-image: url({{ asset('landing-page/assets/images/hero/slide2.png') }});">
                                 <div class="content">
                                     <h2><span class="text-white">Warga Desa Muara Mulai Mendapatkan</span>
                                         Bantuan Langsung Tunai dari BLT Desa Muara.
@@ -108,17 +109,17 @@
                         <i class="lni lni-user"></i>
                     </div>
                     <div class="media-body">
-                        <h5>1000+</h5>
+                        <h5>{{ $masyarakat }}+</h5>
                         <span>Data Penduduk</span>
                     </div>
                 </li>
                 <!-- Money Return -->
                 <li>
                     <div class="media-icon">
-                        <i class="lni lni-users"></i>
+                        <i class="lni lni-home"></i>
                     </div>
                     <div class="media-body">
-                        <h5>700+</h5>
+                        <h5>{{ $keluarga }}+</h5>
                         <span>Data Keluarga</span>
                     </div>
                 </li>
@@ -126,21 +127,21 @@
                 <li>
                     <div class="media-icon">
 
-                        <i class="lni lni-travel"></i>
+                        <i class="lni lni-paperclip"></i>
                     </div>
                     <div class="media-body">
-                        <h5>5+</h5>
-                        <span>Wilayah Dusun</span>
+                        <h5>{{ $berita }}</h5>
+                        <span>Jumlah Postingan</span>
                     </div>
                 </li>
                 <!-- Safe Payment -->
                 <li>
                     <div class="media-icon">
-                        <i class="lni lni-home"></i>
+                        <i class="lni lni-users"></i>
                     </div>
                     <div class="media-body">
-                        <h5>200+</h5>
-                        <span>Rumah Tangga</span>
+                        <h5>{{ $user }}</h5>
+                        <span>Jumlah User</span>
                     </div>
                 </li>
             </ul>
@@ -155,8 +156,7 @@
                 <div class="col-12">
                     <div class="section-title">
                         <h2>Informasi Terkini</h2>
-                        <p>There are many variations of passages of Lorem
-                            Ipsum available, but the majority have suffered alteration in some form.</p>
+                        <p>Daftar berita / kegiatan terbaru dari sistem informasi desa</p>
                     </div>
                 </div>
             </div>
@@ -204,7 +204,8 @@
                                         </a> --}}
                                     </div>
                                 </div>
-                                <a href="{{ url('/berita/' . $post->slug . '') }}">{{ $post->title }}</a>
+                                <h4>
+                                    <a href="{{ url('/berita/' . $post->slug . '') }}">{{ $post->title }}</a>
                                 </h4>
                                 <p>{{ $post->excerpt }}</p>
                                 <div class="button">

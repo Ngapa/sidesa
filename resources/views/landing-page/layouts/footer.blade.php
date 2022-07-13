@@ -14,7 +14,7 @@
                         </div>
                         <div class="col-lg-9 col-md-8 col-12">
                             <div class="footer-newsletter">
-                                <h4 class="title">
+                                {{-- <h4 class="title">
                                     Subscribe to our Newsletter
                                     <span>Get all the latest information, Sales and Offers.</span>
                                 </h4>
@@ -25,7 +25,7 @@
                                             <button class="btn">Subscribe<span class="dir-part"></span></button>
                                         </div>
                                     </form>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -115,18 +115,18 @@
                 <div class="inner-content">
                     <div class="row align-items-center">
                         <div class="col-lg-4 col-12">
-                            <div class="payment-gateway">
+                            {{-- <div class="payment-gateway">
                                 <span>We Accept:</span>
                                 <img src="{{ asset('landing-page/assets/images/footer/credit-cards-footer.png') }}" alt="#">
-                            </div>
+                            </div> --}}
                         </div>
                         <div class="col-lg-4 col-12">
                             <div class="copyright">
-                                <p>Designed and Developed by<a href="https://graygrids.com/" rel="nofollow" target="_blank">GrayGrids</a></p>
+                                <p>Designed and Developed by<a href="" rel="nofollow" target="_blank">NF Computer X Campus Merdeka</a></p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
-                            <ul class="socila">
+                            {{-- <ul class="socila">
                                 <li>
                                     <span>Follow Us On:</span>
                                 </li>
@@ -134,7 +134,7 @@
                                 <li><a href="javascript:void(0)"><i class="lni lni-twitter-original"></i></a></li>
                                 <li><a href="javascript:void(0)"><i class="lni lni-instagram"></i></a></li>
                                 <li><a href="javascript:void(0)"><i class="lni lni-google"></i></a></li>
-                            </ul>
+                            </ul> --}}
                         </div>
                     </div>
                 </div>

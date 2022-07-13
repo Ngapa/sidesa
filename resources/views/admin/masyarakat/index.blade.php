@@ -6,6 +6,7 @@
 
             <h2 class="h4">Data Masyarakat</h2>
             <p class="mb-0">Daftar Masyarakat Yang Terdaftar</p>
+            <p class="mb-0">Jumlah Data : {{ $masyarakats_count }}</p>
         </div>
         <div class="btn-toolbar mb-2 mb-md-0">
             <a href="{{ url('/admin/masyarakat/create') }}"
@@ -22,7 +23,7 @@
             <div class="btn-group ms-2 ms-lg-5">
                 <a href="{{ url('/admin/masyarakat/print-preview') }}" target="_blank" class="btn btn-sm btn-warning"> <i
                         class="lni lni-eye"></i> Preview </a>
-                <a href="{{ url('/admin/masyarakat/pdf') }}" class="btn btn-sm btn-danger"> <i
+                <a href="{{ url('/admin/masyarakat/pdf') }}" target="_blank" class="btn btn-sm btn-danger"> <i
                         class="lni lni-download"></i> Unduh PDF </a>
             </div>
         </div>
@@ -41,6 +42,30 @@
         </div>
     @endif
 
+    @php
+    function tgl_indo($tanggal)
+    {
+        $bulan = [
+            1 => 'Januari',
+            'Februari',
+            'Maret',
+            'April',
+            'Mei',
+            'Juni',
+            'Juli',
+            'Agustus',
+            'September',
+            'Oktober',
+            'November',
+            'Desember',
+        ];
+        $pecahkan = explode('-', $tanggal);
+        // variabel pecahkan 0 = tanggal
+        // variabel pecahkan 1 = bulan
+        // variabel pecahkan 2 = tahun
+        return $pecahkan[2] . ' ' . $bulan[(int) $pecahkan[1]] . ' ' . $pecahkan[0];
+    }
+    @endphp
 
     <div class="col-xxl">
         <div class="card mb-4">
@@ -67,7 +92,7 @@
                                 <td>{{ $masyarakat->nik }}</td>
                                 <td>{{ $masyarakat->nama }}</td>
                                 <td>{{ $masyarakat->jenis_kelamin }}</td>
-                                <td>{{ $masyarakat->tanggal_lahir }}</td>
+                                <td>{{ tgl_indo(date($masyarakat->tanggal_lahir)) }}</td>
                                 {{-- <td>
                                 <textarea cols="10" rows="1" class="text-area-style" disabled>Alamat</textarea>
                             </td> --}}

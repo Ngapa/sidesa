@@ -42,20 +42,10 @@
                                             $waktu = $sekarang->diff($date);
                                         @endphp --}}
                                         <li>
+                                            <a ><i class="lni lni-eye"></i>{{ $totalViews }} <small>x</small> Dibaca</a>
+                                        </li>
+                                        <li>
                                             <a ><i class="lni lni-timer"></i> {{ $post->created_at->diffForHumans() }} </a>
-                                            {{-- <a href=""><i class="lni lni-timer"></i>
-                                                @if($waktu->y != 0)
-                                                    {{ $waktu->y }} Tahun Yang Lalu
-                                                @elseif($waktu->m)
-                                                    {{ $waktu->m }} Bulan Yang Lalu
-                                                @elseif($waktu->d)
-                                                    {{ $waktu->d }} Hari Yang Lalu
-                                                @elseif($waktu->h)
-                                                    {{ $waktu->h }} Jam Yang Lalu
-                                                @elseif($waktu->i)
-                                                    {{ $waktu->i }} Detik Yang Lalu
-                                                @endif
-                                            </a> --}}
                                         </li>
                                     </ul>
                                     <!-- End Meta Info -->

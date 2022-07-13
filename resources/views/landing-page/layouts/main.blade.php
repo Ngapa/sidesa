@@ -7,7 +7,8 @@
     <title>SID | {{ $title }}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('landing-page/assets/images/favicon.svg') }}">
+    {{-- <link rel="shortcut icon" type="image/x-icon" href="{{ asset('landing-page/assets/images/favicon.svg') }}"> --}}
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('landing-page/assets/images/logo/logo.png') }}">
 
     <!-- ========================= CSS here ========================= -->
     <link rel="stylesheet" href="{{ asset('landing-page/assets/css/bootstrap.min.css') }}">
@@ -16,6 +17,9 @@
     <link rel="stylesheet" href="{{ asset('landing-page/assets/css/glightbox.min.css') }}">
     <link rel="stylesheet" href="{{ asset('landing-page/assets/css/main.css') }}">
     <link rel="stylesheet" href="{{ asset('landing-page/assets/css/style.css') }}">
+
+    <link rel="stylesheet" href="{{ asset('landing-page/dana/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('landing-page/dana/css/swiper-bundle.min.css') }}">
 </head>
 
 <body>
@@ -36,6 +40,8 @@
     </a>
 
     <!-- ========================= JS here ========================= -->
+    <script src="{{ asset('landing-page/dana/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('landing-page/dana/js/script.js') }}"></script>
     <script src="{{ asset('landing-page/assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('landing-page/assets/js/tiny-slider.js') }}"></script>
     <script src="{{ asset('landing-page/assets/js/glightbox.min.js') }}"></script>

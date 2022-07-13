@@ -9,49 +9,55 @@
                 <div class="col-12">
                     <div class="section-title">
                         <h2>Sumber Dana</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered alteration in some form.</p>
+                        <p>Berikut beberapa sumber dana desa yang tercatat hingga kini di Sistem Informasi Desa (SID) tahun
+                            {{ date('Y') }}</p>
                     </div>
                 </div>
             </div>
+
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="single-banner" style="background-image:url('https://via.placeholder.com/620x340')">
-                        <div class="content">
-                            <h2>BLT Desa Muara</h2>
-                            <p>Space Gray Aluminum Case with <br>Black/Volt Real Sport Band </p>
-                            <div class="button">
-                                <a href="index.php?page=riwayatsumberdana" class="btn">Riwayat</a>
-                            </div>
+
+                <div class="slide-container swiper">
+                    <div class="slide-content">
+                        <div class="card-wrapper swiper-wrapper">
+
+                            @foreach ($danas as $dana)
+                                <div class="card swiper-slide">
+                                    <div class="image-content">
+                                        <span class="overlay"></span>
+                                        <div class="card-image">
+                                            <img style="position:relative;z-index:10;"
+                                                src="{{ asset('storage/dana/2.jpg') }}" alt="" class="card-img">
+                                        </div>
+                                    </div>
+                                    <div class="card-content">
+                                        <h2 class="name">{{ $dana->nama }}</h2>
+                                        <p class="description">{{ $dana->keterangan }}</p>
+                                        <button class="button">@money($dana->jumlah)</button>
+                                    </div>
+                                </div>
+                            @endforeach
+
                         </div>
                     </div>
+
+                    <div class="swiper-button-next swiper-navBtn"></div>
+                    <div class="swiper-button-prev swiper-navBtn"></div>
+                    <div class="swiper-pagination"></div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-12">
-                    <div class="single-banner custom-responsive-margin"
-                        style="background-image:url('https://via.placeholder.com/620x340')">
-                        <div class="content">
-                            <h2>Kemesos RI</h2>
-                            <p>Lorem ipsum dolor sit amet, <br>eiusmod tempor
-                                incididunt ut labore.</p>
-                            <div class="button">
-                                <a href="index.php?page=riwayatsumberdana" class="btn">Riwayat</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
     <!-- End Banner Area -->
 
-    <section class="section mt-3">
+    <section class="section">
         <div class="container">
             <div class="row">
                 <div class="col-12">
                     <div class="section-title">
-                        <h2>Riwayat Sumber Dana</h2>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have
-                            suffered alteration in some form.</p>
+                        <h2>Riwayat Pengeluaran Dana</h2>
+                        <p>Berikut list/daftar pengeluaran dari penggunaan dana desa hingga tahun {{ date('Y') }}.</p>
                     </div>
                 </div>
             </div>
@@ -60,33 +66,34 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Sumber Dana</th>
-                        <th scope="col">Tanggal</th>
+                        <th scope="col">Tanggal Pengeluaran</th>
                         <th scope="col">Jumlah</th>
+                        <th scope="col">Penanggung Jawab</th>
                         <th scope="col">Keterangan</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                        <td>@mdo</td>
-                    </tr>
+                    @php $no=1; @endphp
+                    @if ($danaKeluar != '[]')
+                        @foreach ($danaKeluar as $dk)
+                            <tr>
+                                <th scope="row">{{ $no++ }}</th>
+                                <td>{{ $dk->dana->nama }}</td>
+                                <td>{{ (new DateTime($dk->waktu))->format('d, D M Y') }}</td>
+                                <td>@money($dk->jumlah)</td>
+                                <td>{{ $dk->user->masyarakat->nama }}</td>
+                                <td>{{ $dk->keterangan }}</td>
+                            </tr>
+                        @endforeach
+                    @else
+                        <tr>
+                            <td colspan="5" class="text-center">
+                                <h6 class="text-muted">Record Data Masih Kosong !</h6>
+                            </td>
+                        </tr>
+                    @endif
+
+
                 </tbody>
             </table>
         </div>

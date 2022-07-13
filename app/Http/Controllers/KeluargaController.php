@@ -7,7 +7,9 @@ use App\Models\Masyarakat;
 use Illuminate\Http\Request;
 
 // use PDF;
-use \Barryvdh\DomPDF\Facade\Pdf;
+use \Barryvdh\DomPDF\Facade\PDF;
+
+use App\Rules\CheckNik;
 
 class KeluargaController extends Controller
 {
@@ -46,7 +48,7 @@ class KeluargaController extends Controller
     {
         //
         $rules = [
-            'nikk' => 'required|unique:keluargas|numeric|min:16|max:18',
+            'nikk' => ['required', 'numeric', 'unique:keluargas', new CheckNik()],
             'kepala_keluarga' => 'required',
             'alamat' => 'required',
             'jumlah_keluarga' => 'required|numeric',
@@ -103,9 +105,9 @@ class KeluargaController extends Controller
         if (empty($request->nikk)) {
             $rules['nikk'] = 'required';
         } else if ($request->nikk == $keluarga->nikk) {
-            $rules['nikk'] = 'numeric|min:16|max:18';
+            $rules['nikk'] = ['required', 'numeric', new CheckNik()];
         } else {
-            $rules['nikk'] = 'numeric|unique:keluargas|min:16|max:18';
+            $rules['nikk'] = ['required', 'numeric', 'unique:keluargas', new CheckNik()];
         }
 
         $validatedData = $request->validate($rules);
@@ -142,7 +144,7 @@ class KeluargaController extends Controller
     // domPDF
     public function generatePDF()
     {
-        $keluargas = Keluarga::orderBy('id','DESC')->get();
+        $keluargas = Keluarga::orderBy('id', 'DESC')->get();
         $title = 'Ekspoort PDF';
         $date = date('d/M/Y');
 
@@ -153,7 +155,7 @@ class KeluargaController extends Controller
     // domPDF
     public function previewPDF()
     {
-        $keluargas = Keluarga::orderBy('id','DESC')->get();
+        $keluargas = Keluarga::orderBy('id', 'DESC')->get();
         $title = 'Ekspoort PDF';
         $date = date('m/d/Y');
 

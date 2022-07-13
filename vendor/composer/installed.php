@@ -61,6 +61,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'cyrildewit/eloquent-viewable' => array(
+            'pretty_version' => 'v6.1.0',
+            'version' => '6.1.0.0',
+            'reference' => 'b661b456386d5dd515812adc437d7ed9711d5053',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../cyrildewit/eloquent-viewable',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'davedevelopment/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -423,6 +432,15 @@
             'replaced' => array(
                 0 => 'v8.83.17',
             ),
+        ),
+        'jaybizzle/crawler-detect' => array(
+            'pretty_version' => 'v1.2.111',
+            'version' => '1.2.111.0',
+            'reference' => 'd572ed4a65a70a2d2871dc5137c9c5b7e69745ab',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jaybizzle/crawler-detect',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,

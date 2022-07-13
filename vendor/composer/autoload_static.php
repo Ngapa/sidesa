@@ -19,8 +19,8 @@ class ComposerStaticInit5a861c15044a244f2652b37d3c259035
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
-        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
+        'def43f6c87e4f8dfd0c9e1b1bab14fe8' => __DIR__ . '/..' . '/symfony/polyfill-iconv/bootstrap.php',
         '2cffec82183ee1cea088009cef9a6fc3' => __DIR__ . '/..' . '/ezyang/htmlpurifier/library/HTMLPurifier.composer.php',
         '538ca81a9a966a6716601ecf48f4eaef' => __DIR__ . '/..' . '/opis/closure/functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
@@ -34,6 +34,7 @@ class ComposerStaticInit5a861c15044a244f2652b37d3c259035
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
+        '55939d295627a904f01d5f2ab92e8d67' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/helpers.php',
         'ed962a97bd972bc82007176b647d4e36' => __DIR__ . '/..' . '/facade/ignition/src/helpers.php',
         '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
@@ -140,6 +141,10 @@ class ComposerStaticInit5a861c15044a244f2652b37d3c259035
             'Laravel\\Sanctum\\' => 16,
             'Laravel\\Sail\\' => 13,
         ),
+        'J' => 
+        array (
+            'Jaybizzle\\CrawlerDetect\\' => 24,
+        ),
         'I' => 
         array (
             'Illuminate\\Support\\' => 19,
@@ -179,6 +184,7 @@ class ComposerStaticInit5a861c15044a244f2652b37d3c259035
         ),
         'C' => 
         array (
+            'CyrildeWit\\EloquentViewable\\' => 28,
             'Cviebrock\\EloquentSluggable\\' => 28,
             'Cron\\' => 5,
             'Complex\\' => 8,
@@ -453,6 +459,10 @@ class ComposerStaticInit5a861c15044a244f2652b37d3c259035
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
         ),
+        'Jaybizzle\\CrawlerDetect\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src',
+        ),
         'Illuminate\\Support\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Macroable',
@@ -542,6 +552,10 @@ class ComposerStaticInit5a861c15044a244f2652b37d3c259035
         array (
             0 => __DIR__ . '/../..' . '/database/factories',
         ),
+        'CyrildeWit\\EloquentViewable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src',
+        ),
         'Cviebrock\\EloquentSluggable\\' => 
         array (
             0 => __DIR__ . '/..' . '/cviebrock/eloquent-sluggable/src',
@@ -604,6 +618,9 @@ class ComposerStaticInit5a861c15044a244f2652b37d3c259035
         'App\\Http\\Controllers\\AgamaController' => __DIR__ . '/../..' . '/app/Http/Controllers/AgamaController.php',
         'App\\Http\\Controllers\\CategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoryController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
+        'App\\Http\\Controllers\\DanaController' => __DIR__ . '/../..' . '/app/Http/Controllers/DanaController.php',
+        'App\\Http\\Controllers\\DanaKeluarController' => __DIR__ . '/../..' . '/app/Http/Controllers/DanaKeluarController.php',
+        'App\\Http\\Controllers\\DanaMasukController' => __DIR__ . '/../..' . '/app/Http/Controllers/DanaMasukController.php',
         'App\\Http\\Controllers\\DashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/DashboardController.php',
         'App\\Http\\Controllers\\KeluargaController' => __DIR__ . '/../..' . '/app/Http/Controllers/KeluargaController.php',
         'App\\Http\\Controllers\\ManageUserController' => __DIR__ . '/../..' . '/app/Http/Controllers/ManageUserController.php',
@@ -779,6 +796,25 @@ class ComposerStaticInit5a861c15044a244f2652b37d3c259035
         'Cviebrock\\EloquentSluggable\\Sluggable' => __DIR__ . '/..' . '/cviebrock/eloquent-sluggable/src/Sluggable.php',
         'Cviebrock\\EloquentSluggable\\SluggableObserver' => __DIR__ . '/..' . '/cviebrock/eloquent-sluggable/src/SluggableObserver.php',
         'Cviebrock\\EloquentSluggable\\SluggableScopeHelpers' => __DIR__ . '/..' . '/cviebrock/eloquent-sluggable/src/SluggableScopeHelpers.php',
+        'CyrildeWit\\EloquentViewable\\CacheKey' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/CacheKey.php',
+        'CyrildeWit\\EloquentViewable\\Contracts\\CrawlerDetector' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/Contracts/CrawlerDetector.php',
+        'CyrildeWit\\EloquentViewable\\Contracts\\View' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/Contracts/View.php',
+        'CyrildeWit\\EloquentViewable\\Contracts\\Viewable' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/Contracts/Viewable.php',
+        'CyrildeWit\\EloquentViewable\\Contracts\\Views' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/Contracts/Views.php',
+        'CyrildeWit\\EloquentViewable\\Contracts\\Visitor' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/Contracts/Visitor.php',
+        'CyrildeWit\\EloquentViewable\\CooldownManager' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/CooldownManager.php',
+        'CyrildeWit\\EloquentViewable\\CrawlerDetectAdapter' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/CrawlerDetectAdapter.php',
+        'CyrildeWit\\EloquentViewable\\EloquentViewableServiceProvider' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/EloquentViewableServiceProvider.php',
+        'CyrildeWit\\EloquentViewable\\Events\\ViewRecorded' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/Events/ViewRecorded.php',
+        'CyrildeWit\\EloquentViewable\\Exceptions\\InvalidPeriod' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/Exceptions/InvalidPeriod.php',
+        'CyrildeWit\\EloquentViewable\\Exceptions\\ViewRecordException' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/Exceptions/ViewRecordException.php',
+        'CyrildeWit\\EloquentViewable\\InteractsWithViews' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/InteractsWithViews.php',
+        'CyrildeWit\\EloquentViewable\\Support\\Period' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/Support/Period.php',
+        'CyrildeWit\\EloquentViewable\\View' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/View.php',
+        'CyrildeWit\\EloquentViewable\\ViewableObserver' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/ViewableObserver.php',
+        'CyrildeWit\\EloquentViewable\\Views' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/Views.php',
+        'CyrildeWit\\EloquentViewable\\ViewsFacade' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/ViewsFacade.php',
+        'CyrildeWit\\EloquentViewable\\Visitor' => __DIR__ . '/..' . '/cyrildewit/eloquent-viewable/src/Visitor.php',
         'Database\\Factories\\CategoryFactory' => __DIR__ . '/../..' . '/database/factories/CategoryFactory.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\CategorySeeder' => __DIR__ . '/../..' . '/database/seeders/CategorySeeder.php',
@@ -3152,6 +3188,11 @@ class ComposerStaticInit5a861c15044a244f2652b37d3c259035
         'Illuminate\\View\\ViewFinderInterface' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewFinderInterface.php',
         'Illuminate\\View\\ViewName' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewName.php',
         'Illuminate\\View\\ViewServiceProvider' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/View/ViewServiceProvider.php',
+        'Jaybizzle\\CrawlerDetect\\CrawlerDetect' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/CrawlerDetect.php',
+        'Jaybizzle\\CrawlerDetect\\Fixtures\\AbstractProvider' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/Fixtures/AbstractProvider.php',
+        'Jaybizzle\\CrawlerDetect\\Fixtures\\Crawlers' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/Fixtures/Crawlers.php',
+        'Jaybizzle\\CrawlerDetect\\Fixtures\\Exclusions' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/Fixtures/Exclusions.php',
+        'Jaybizzle\\CrawlerDetect\\Fixtures\\Headers' => __DIR__ . '/..' . '/jaybizzle/crawler-detect/src/Fixtures/Headers.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',

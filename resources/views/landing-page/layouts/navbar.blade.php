@@ -49,7 +49,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-3 col-md-3 col-7">
                     <!-- Start Header Logo -->
-                    <a class="navbar-brand" href="index.php?page=home">
+                    <a class="navbar-brand" href="{{ url('/') }}">
                         <img src="{{ asset('landing-page/assets/images/logo/logo.png') }}" alt="Logo">
                     </a>
                     <!-- End Header Logo -->
@@ -59,7 +59,7 @@
 
                     <!-- End Main Menu Search -->
                 </div>
-                <div class="col-lg-4 col-md-2 col-5">
+                {{-- <div class="col-lg-4 col-md-2 col-5">
                     <div class="middle-right-area">
                         <div class="nav-hotline">
                             <i class="lni lni-phone"></i>
@@ -83,7 +83,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
@@ -94,9 +94,9 @@
             <div class="col-lg-9 col-md-6 col-12">
                 <div class="nav-inner">
                     <!-- Start Mega Category Menu -->
-                    <div class="mega-category-menu">
+                    {{-- <div class="mega-category-menu">
                         <span class="cat-button"><i class="lni lni-scroll-down"></i></span>
-                    </div>
+                    </div> --}}
                     <!-- End Mega Category Menu -->
                     <!-- Start Navbar -->
                     <nav class="navbar navbar-expand-lg">
@@ -166,7 +166,7 @@
             <div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Nav Social -->
                 <div class="nav-social">
-                    <h5 class="title">Follow Us:</h5>
+                    <h5 class="title">Ikuti Kami:</h5>
                     <ul>
                         <li>
                             <a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a>

@@ -16,16 +16,42 @@
 
         </div>
     </div>
-
+    @php
+    function tgl_indo($tanggal)
+    {
+        $bulan = [
+            1 => 'Januari',
+            'Februari',
+            'Maret',
+            'April',
+            'Mei',
+            'Juni',
+            'Juli',
+            'Agustus',
+            'September',
+            'Oktober',
+            'November',
+            'Desember',
+        ];
+        $pecahkan = explode('-', $tanggal);
+        // variabel pecahkan 0 = tanggal
+        // variabel pecahkan 1 = bulan
+        // variabel pecahkan 2 = tahun
+        return $pecahkan[2] . ' ' . $bulan[(int) $pecahkan[1]] . ' ' . $pecahkan[0];
+    }
+    @endphp
 
     <div class="row mb-3 text-center">
         <div class="col-12">
-            <div class="card card-body border-0 shadow border-2" style="border:0.5px solid rgba(0, 0, 0, 0.197) !important;">
+            <div class="card card-body border-0 shadow border-2"
+                style="border:0.5px solid rgba(0, 0, 0, 0.197) !important;">
                 <h2 class="h5 mb-4">Cetak Kebutuhan Berkas</h2>
                 <div class="row justify-content-center">
-                    <a href="" class="btn btn-outline-success col-2">SK Tidak Mampu</a>
-                    <a href="" class="btn btn-outline-success col-2">SP SKCK</a>
-                    <a href="" class="btn btn-outline-success col-2">SK Penghasilan</a>
+                    <a href="{{ url('/admin/masyarakat/sk-tidak-mampu', $masyarakat->id) }}"
+                        class="btn btn-outline-success col-2"><i class="lni lni-download"></i> SK
+                        Tidak Mampu</a>
+                    {{-- <a href="" class="btn btn-outline-success col-2">SP SKCK</a>
+                    <a href="" class="btn btn-outline-success col-2">SK Penghasilan</a> --}}
                 </div>
             </div>
         </div>
@@ -73,8 +99,8 @@
                             <span class="input-group-text">
                                 <i class="lni lni-calendar"></i>
                             </span>
-                            <input class="form-control" type="text" placeholder="{{ $masyarakat->tanggal_lahir }}"
-                                disabled>
+                            <input class="form-control" type="text"
+                                placeholder="{{ tgl_indo(date($masyarakat->tanggal_lahir)) }}" disabled>
                         </div>
                     </div>
                     <div class="col-md-6 mb-3">
@@ -184,7 +210,7 @@
                                         <th scope="row">{{ $no++ }}</th>
                                         <td>{{ $data->nik }}</td>
                                         <td>{{ $data->nama }}</td>
-                                        <td>{{ $data->tempat_lahir }}, {{ $data->tanggal_lahir }}</td>
+                                        <td>{{ $data->tempat_lahir }}, {{ tgl_indo(date($data->tanggal_lahir)) }}</td>
                                         <td>{{ $data->status }}</td>
                                         <td>{{ $data->pendidikan_terakhir }}</td>
                                     </tr>

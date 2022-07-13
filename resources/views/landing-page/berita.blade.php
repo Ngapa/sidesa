@@ -45,7 +45,7 @@
                 <div class="col-lg-8 col-md-12 col-12">
                     <div class="row">
                         @if ($posts->count() != 0)
-                            <h4 class="mb-3 mt-4 text-center heading-6"> {{ $title }}</h4>
+                            {{-- <h4 class="mb-3 mt-4 text-center heading-6"> {{ $title }}</h4> --}}
                             <table>
                                 @foreach ($posts as $post)
                                     @if ($post->id != $head_berita->id)
@@ -104,13 +104,13 @@
                 <aside class="col-lg-4 col-md-12 col-12">
                     <div class="sidebar blog-grid-page">
                         <!-- Start Single Widget -->
-                        <div class="widget search-widget">
+                        {{-- <div class="widget search-widget">
                             <h5 class="widget-title">Search This Site</h5>
                             <form action="#">
                                 <input type="text" placeholder="Search Here...">
                                 <button type="submit"><i class="lni lni-search-alt"></i></button>
                             </form>
-                        </div>
+                        </div> --}}
                         <!-- End Single Widget -->
 
 
@@ -121,7 +121,8 @@
                         <!-- End Single Widget -->
 
                         <!-- Start Single Widget -->
-                        <div class="widget popular-feeds">
+
+                        {{-- <div class="widget popular-feeds">
                             <h5 class="widget-title">Featured Posts</h5>
                             <div class="popular-feed-loop">
                                 <div class="single-popular-feed">
@@ -160,11 +161,13 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
+
                         <!-- End Single Widget -->
 
                         <!-- Start Single Widget -->
-                        <div class="widget popular-tag-widget">
+
+                        {{-- <div class="widget popular-tag-widget">
                             <h5 class="widget-title">Popular Tags</h5>
                             <div class="tags">
                                 <a href="javascript:void(0)">#electronics</a>
@@ -173,7 +176,8 @@
                                 <a href="javascript:void(0)">#wearables</a>
                                 <a href="javascript:void(0)">#smartphones</a>
                             </div>
-                        </div>
+                        </div> --}}
+
                         <!-- End Single Widget -->
                     </div>
                 </aside>

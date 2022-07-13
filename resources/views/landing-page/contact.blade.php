@@ -8,9 +8,8 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="section-title">
-                            <h2>Contact Us</h2>
-                            <p>There are many variations of passages of Lorem
-                                Ipsum available, but the majority have suffered alteration in some form.</p>
+                            <h2>Hubungu Kami</h2>
+                            <p>silahkan isi form untuk mengirim pesan kepada admin desa.</p>
                         </div>
                     </div>
                 </div>
@@ -52,45 +51,68 @@
                         </div>
                         <div class="col-lg-8 col-md-12 col-12">
                             <div class="contact-form-head">
+                                @if (Session::has('success'))
+                                    <div class="alert alert-success">
+                                        {{ Session::get('success') }}
+                                    </div>
+                                @endif
                                 <div class="form-main">
-                                    <form class="form" method="post" action="assets/mail/mail.php">
+                                    <form class="form" method="post" action="{{ route('contact.us.store') }}">
+                                        {{ csrf_field() }}
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 col-12">
                                                 <div class="form-group">
-                                                    <input name="name" type="text" placeholder="Your Name"
-                                                        required="required">
+                                                    <input name="name" type="text" placeholder="Nama Anda"
+                                                        required="required" value="{{ old('name') }}">
+                                                    @if ($errors->has('name'))
+                                                        <span class="text-danger">{{ $errors->first('name') }}</span>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-12">
                                                 <div class="form-group">
-                                                    <input name="subject" type="text" placeholder="Your Subject"
-                                                        required="required">
+                                                    <input name="subject" type="text" placeholder="Subjek Pesan"
+                                                        required="required"  value="{{ old('subject') }}">
+                                                    @if ($errors->has('subject'))
+                                                        <span class="text-danger">{{ $errors->first('subject') }}</span>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-12">
                                                 <div class="form-group">
-                                                    <input name="email" type="email" placeholder="Your Email"
-                                                        required="required">
+                                                    <input name="email" type="email" placeholder="Email Anda"
+                                                        required="required"  value="{{ old('email') }}">
+                                                    @if ($errors->has('email'))
+                                                        <span class="text-danger">{{ $errors->first('email') }}</span>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md-6 col-12">
                                                 <div class="form-group">
-                                                    <input name="phone" type="text" placeholder="Your Phone"
-                                                        required="required">
+                                                    <input name="phone" type="text" placeholder="No Handphone Anda"
+                                                        required="required"  value="{{ old('phone') }}">
+                                                    @if ($errors->has('phone'))
+                                                        <span class="text-danger">{{ $errors->first('phone') }}</span>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="form-group message">
-                                                    <textarea name="message" placeholder="Your Message"></textarea>
+                                                    <textarea name="message" placeholder="Pesan Anda"> {{ old('message') }}</textarea>
+                                                    @if ($errors->has('meesage'))
+                                                        <span class="text-danger">{{ $errors->first('message') }}</span>
+                                                    @endif
                                                 </div>
                                             </div>
                                             <div class="col-12">
                                                 <div class="form-group button">
-                                                    <button type="submit" class="btn ">Submit Message</button>
+                                                    <button type="submit" class="btn ">Kirim Pesan</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </form>
+
+
                                 </div>
                             </div>
                         </div>

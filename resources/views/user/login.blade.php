@@ -6,9 +6,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1 col-12">
-                    {{-- @if (session()->has('success'))
-                        {{ session('success') }}
-                    @endif --}}
+
 
                     <form class="card login-form" method="post" action="{{ url('/login') }}">
                         @csrf
@@ -19,6 +17,11 @@
                             </div>
                             <div class="social-login">
                                 <div class="row">
+                                    @if ($message = Session::get('success'))
+                                        <div class="alert alert-success">
+                                            <p>{{ $message }}</p>
+                                        </div>
+                                    @endif
                                     @if (session()->has('loginError'))
                                         <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                             {{ session('loginError') }}

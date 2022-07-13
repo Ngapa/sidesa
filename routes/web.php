@@ -1,28 +1,33 @@
 <?php
 
 
+
 use App\Models\Post;
 use App\Models\Category;
 use App\Models\Masyarakat;
 use App\Http\Middleware\IsAdmin;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PDFController;
 
+use App\Http\Controllers\PDFController;
+use App\Http\Controllers\DanaController;
 use App\Http\Controllers\PostController;
+
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AgamaController;
-
 use App\Http\Controllers\LoginController;
+
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\KeluargaController;
-
 use App\Http\Controllers\RegisterController;
+
+use App\Http\Controllers\DanaMasukController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\DanaKeluarController;
+
 use App\Http\Controllers\ManageUserController;
 use App\Http\Controllers\MasyarakatController;
 
-use App\Http\Controllers\DanaController;
-use App\Http\Controllers\DanaMasukController;
-use App\Http\Controllers\DanaKeluarController;
+use App\Http\Controllers\ContactController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,11 +60,7 @@ Route::get('/struktur-pemerintahan', function () {
     ]);
 });
 // dana
-Route::get('/dana', function () {
-    return view('landing-page.dana', [
-        "title" => "Dana Desa"
-    ]);
-});
+Route::get('/dana', [DanaController::class, 'landingPage']);
 // about
 Route::get('/about', function () {
     return view('landing-page.about', [
@@ -72,6 +73,8 @@ Route::get('/contact', function () {
         "title" => "hubungi"
     ]);
 });
+Route::post('contact', [ContactController::class, 'store'])->name('contact.us.store');
+
 // memanggil controller dan model untuk menampilkan data pada post dan category
 Route::get('/', [PostController::class, 'home']);
 Route::get('/berita', [PostController::class, 'berita']);
@@ -94,11 +97,7 @@ Route::post('/register', [RegisterController::class, 'store']);
 // --------------------------------------
 // admin
 Route::middleware([auth::class])->group(function () {
-    Route::get('/admin/dashboard', function () {
-        return view('admin.dashboard', [
-            "title" => "Dashboard",
-        ]);
-    });
+    Route::get('/admin/dashboard', [DashboardController::class, 'index']);
     Route::get('/admin', function () {
         return view('admin.dashboard', [
             "title" => "Dashboard",
@@ -136,6 +135,8 @@ Route::middleware([auth::class])->group(function () {
     Route::get('/admin/masyarakat/show/{masyarakat:id}', [MasyarakatController::class, 'show']);
     Route::get('/admin/masyarakat/pdf', [MasyarakatController::class, 'generatePDF']);
     Route::get('/admin/masyarakat/print-preview', [MasyarakatController::class, 'previewPDF']);
+    // surat keperluan
+    Route::get('/admin/masyarakat/sk-tidak-mampu/{id}', [MasyarakatController::class, 'skTidakMampu']);
     // excel
     Route::get('/admin/masyarakat/export-excel', [MasyarakatController::class, 'masyarakatExcel'])->name('masyarakatExcel');
     // filter umur
@@ -176,6 +177,7 @@ Route::middleware([auth::class])->group(function () {
     Route::get('/admin/dana/create', [DanaController::class, 'create']);
     Route::get('/admin/dana/edit/{dana:id}', [DanaController::class, 'edit']);
     Route::get('/admin/dana/show/{dana:id}', [DanaController::class, 'show']);
+    Route::get('/admin/dana/pdf', [DanaController::class, 'danaPDF']);
     // dana masuk
     Route::resource('dana_masuks', DanaMasukController::class);
     Route::get('/admin/dana_masuk', [DanaMasukController::class, 'index']);

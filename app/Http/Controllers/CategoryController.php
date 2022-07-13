@@ -6,7 +6,9 @@ use App\Models\Post;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
+// str slug
 use Illuminate\Support\Str;
+
 use Illuminate\Routing\Controller;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
@@ -63,12 +65,13 @@ class CategoryController extends Controller
     public function store(StoreCategoryRequest $request)
     {
         //
-        $request->validate([
+        $validatedData = $request->validate([
             'nama' => 'required',
             'slug' => 'required|unique:categories',
         ]);
 
-        Category::create($request->all());
+        $validatedData['nama'] = Str::title($request->nama);
+        Category::create($validatedData);
         return redirect('/admin/kategori-berita')
             ->with('success', 'Kategori ' . $request->nama . ' Berhasil Ditambahkan !');
     }
@@ -108,18 +111,18 @@ class CategoryController extends Controller
     {
         //
         if ($request->slug == $category->slug) {
-            $request->validate([
+            $validatedData = $request->validate([
                 'nama' => 'required',
                 'slug' => 'required',
             ]);
         } else {
-            $request->validate([
+            $validatedData = $request->validate([
                 'nama' => 'required',
                 'slug' => 'required|unique:categories',
             ]);
         }
-
-        $category->update($request->all());
+        $validatedData['nama'] = Str::title($request->nama);
+        $category->update($validatedData);
         return redirect('/admin/kategori-berita')
             ->with('success', 'Kategori ' . $request->nama . ' Berhasil Di Update');
     }
@@ -149,7 +152,7 @@ class CategoryController extends Controller
 
     public function slugest(request $request)
     {
-        $slug = Str::slug($request->nama);
+        $slug = Str::slug($request->nama, '-');
         return response()->json(['slug' => $slug]);
     }
 }

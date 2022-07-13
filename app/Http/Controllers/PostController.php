@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
-use App\Models\Category;
 use DateTime;
-use Illuminate\Support\Str;
+use App\Models\Post;
+use App\Models\User;
+use App\Models\Category;
 
+use App\Models\Keluarga;
+use App\Models\Masyarakat;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;
+
 
 class PostController extends Controller
 {
@@ -37,9 +41,13 @@ class PostController extends Controller
     {
         //
         $posts = Post::latest()->paginate(3);
+        $masyarakat = Masyarakat::count();
+        $keluarga = Keluarga::count();
+        $berita = Post::count();
+        $user = User::count();
         return view('landing-page.home', [
             "title" => "Home"
-        ], compact('posts'))
+        ], compact('posts','masyarakat','keluarga','berita','user'))
             ->with('i', (request()->input('page', 1) - 1) * 3);
     }
 
@@ -93,6 +101,7 @@ class PostController extends Controller
             $validatedData['foto'] = $request->file('foto')->store('foto-post');
         }
 
+        $validatedData['title'] = Str::title($request->title);
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
         $validatedData['published_at'] = now();
 
@@ -110,9 +119,12 @@ class PostController extends Controller
     public function show(Post $post)
     {
         //
+        views($post)->cooldown(now()->addHours(1))->record();
+        $totalViews = views($post)
+            ->count();
         return view('landing-page.berita-detail', [
             "title" => "Berita",
-        ], compact('post'));
+        ], compact('post', 'totalViews'));
     }
 
     /**
@@ -154,6 +166,7 @@ class PostController extends Controller
 
         // validasi
         $validatedData = $request->validate($rules);
+        $validatedData['title'] = Str::title($request->title);
 
         if ($post->body != $request->body) {
             $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);
@@ -195,7 +208,7 @@ class PostController extends Controller
 
     public function checkSlug(request $request)
     {
-        $slug = Str::slug($request->title);
+        $slug = Str::slug($request->title, '-');
         return response()->json(['slug' => $slug]);
     }
 }

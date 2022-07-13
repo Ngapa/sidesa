@@ -4,6 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <!-- Primary Meta Tags -->
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('landing-page/assets/images/logo/logo.png') }}">
     <title>SID | Dashoard - {{ $title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 

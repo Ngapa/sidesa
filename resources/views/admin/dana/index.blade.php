@@ -13,9 +13,15 @@
                 <i class="lni lni-plus me-2"></i>
                 Tambah Data
             </a>
+            <div class="btn-group ms-2 ms-lg-5">
+                <a href="{{ url('/admin/dana/pdf') }}" class="btn btn-sm btn-danger text-white"> <i
+                        class="lni lni-download"></i></i> Unduh PDF Report </a>
+            </div>
             <div class="btn-group ms-2 ms-lg-3">
-                <a href="{{ url('/admin/dana_masuk') }}" class="btn btn-sm btn-outline-gray-600">Dana Masuk</a>
-                <a href="{{ url('/admin/dana_keluar') }}" class="btn btn-sm btn-outline-gray-600">Dana Keluar</a>
+                <a href="{{ url('/admin/dana_masuk') }}" class="btn btn-sm btn-success"><i
+                        class="lni lni-exit-down me-2"></i> Dana Masuk</a>
+                <a href="{{ url('/admin/dana_keluar') }}" class="btn btn-sm btn-warning"><i
+                        class="lni lni-exit-up me-2"></i> Dana Keluar</a>
             </div>
         </div>
     </div>

@@ -15,15 +15,15 @@
             </a>
 
             <div class="btn-group ms-2 ms-lg-5">
-                <a href="{{ url('/admin/masyarakat/export-excel') }}" class="btn btn-sm btn-success text-white"> <i
-                        class="lni lni-printer"></i></i> Ecxel </a>
+                <a href="{{ url('/admin/masyarakat') }}" class="btn btn-sm btn-success text-white"> <i
+                        class="lni lni-users"></i></i> Ke Data Masyarakat </a>
             </div>
 
             <div class="btn-group ms-2 ms-lg-5">
-                <a href="{{ url('/admin/masyarakat/print-preview') }}" target="_blank" class="btn btn-sm btn-warning"> <i
+                {{-- <a href="{{ url('/admin/masyarakat/print-preview') }}" target="_blank" class="btn btn-sm btn-warning"> <i
                         class="lni lni-eye"></i> Preview </a>
                 <a href="{{ url('/admin/masyarakat/pdf') }}" class="btn btn-sm btn-danger"> <i
-                        class="lni lni-download"></i> Unduh PDF </a>
+                        class="lni lni-download"></i> Unduh PDF </a> --}}
             </div>
         </div>
     </div>
@@ -53,11 +53,12 @@
                             <th>Nama Lengkap</th>
                             <th>Jenis Kelamin</th>
                             <th>Tempat, Tanggal Lahir</th>
-                            <th>Action</th>
+                            {{-- <th>Action</th> --}}
                         </tr>
                     </thead>
                     <tbody>
                         @php
+                            $jumlah_data = 0;
                             $no = 1;
                             function tgl_indo($tanggal)
                             {
@@ -89,6 +90,7 @@
                                 $umur = $today->diff($get);
                             @endphp
                             @if ($umur->y >= 17)
+                                @php $jumlah_data++ @endphp
                                 <tr>
                                     <td>{{ $no++ }}</td>
                                     <td> <img style="width:70px !important;" src="{{ asset('storage/' . $d->foto) }}"
@@ -98,13 +100,12 @@
                                     <td>{{ $d->jenis_kelamin }}</td>
                                     <td>{{ $d->tempat_lahir }},
                                         {{ tgl_indo(date($d->tanggal_lahir)) }}</td>
-                                    <td>
+                                    {{-- <td>
                                         <div>
                                             <form method="POST" action="{{ route('masyarakats.destroy', $d->id) }}">
                                                 @csrf
-                                                {{-- @method('DELETE') --}}
                                                 <a href="{{ url('/admin/masyarakat/show', $d->id) }}"
-                                                    class="btn btn-sm bg-primary text-white"><i
+                                                    class="btn btn-sm bg-success text-white"><i
                                                         class="lni lni-eye me-1"></i>
                                                     View</a>
                                                 <a href="{{ url('/admin/masyarakat/edit', $d->id) }}"
@@ -118,7 +119,7 @@
                                                         class="lni lni-trash-can me-1"></i>Delete</button>
                                             </form>
                                         </div>
-                                    </td>
+                                    </td> --}}
                                 </tr>
                             @endif
                         @endforeach
@@ -126,6 +127,9 @@
                     </tbody>
 
                 </table>
+                <div class="card text-center mt-5">
+                    Jumlah Data : {{ $jumlah_data }}
+                </div>
             </div>
         </div>
         <!-- /.card-body -->

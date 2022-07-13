@@ -10,7 +10,7 @@ use App\Models\User;
 // request
 use Illuminate\Http\Request;
 // use PDF;
-use \Barryvdh\DomPDF\Facade\Pdf;
+use \Barryvdh\DomPDF\Facade\PDF;
 //
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\DB;
@@ -22,7 +22,6 @@ use App\Imports\MasyarakatsImport;
 use Maatwebsite\Excel\Facades\Excel;
 // rules
 use App\Rules\CheckNik;
-use DateTime;
 
 class MasyarakatController extends Controller
 {
@@ -37,7 +36,8 @@ class MasyarakatController extends Controller
         $title = "Masyarakat";
         // $masyarakats = Masyarakat::latest()->paginate(5);
         $masyarakats = Masyarakat::orderBy('id', 'DESC')->get();
-        return view('admin.masyarakat.index', compact('title', 'masyarakats'));
+        $masyarakats_count = Masyarakat::count();
+        return view('admin.masyarakat.index', compact('title', 'masyarakats','masyarakats_count'));
     }
 
     /**
@@ -201,7 +201,7 @@ class MasyarakatController extends Controller
         if (empty($request->nik)) {
             $rules['nik'] = 'required';
         } else if ($request->nik == $masyarakat->nik) {
-            $rules['nik'] = 'numeric|min:16';
+            $rules['nik'] = ['required', 'numeric', new CheckNik()];
         } else {
             $rules['nik'] = ['required', 'numeric', 'unique:masyarakats', new CheckNik()];
         }
@@ -267,9 +267,7 @@ class MasyarakatController extends Controller
     public function generatePDF()
     {
         $masyarakats = Masyarakat::orderBy('id', 'DESC')->get();
-        $title = 'Ekspoort PDF';
         $date = date('d/M/Y');
-
         $pdf = PDF::loadView('admin.masyarakat.pdf', ['masyarakats' => $masyarakats]);
         return $pdf->download('Masyarakat-' . $date . '.pdf');
     }
@@ -279,10 +277,9 @@ class MasyarakatController extends Controller
         $masyarakats = Masyarakat::orderBy('id', 'DESC')->get();
         $title = 'Ekspoort PDF';
         $date = date('d/d/Y');
-
         // $pdf = PDF::loadView('admin.masyarakat.pdf', ['masyarakats' => $masyarakats]);
         // return $pdf->download('Masyarakat-' . $date . '.pdf');
-        return view('admin.masyarakat.pdf', compact('title', 'masyarakats'));
+        return view('admin.masyarakat.pdf-preview', compact('title', 'masyarakats'));
     }
 
 
@@ -295,9 +292,22 @@ class MasyarakatController extends Controller
 
 
     // filter umur
-    public function pemilih(){
+    public function pemilih()
+    {
         $data = Masyarakat::all();
         $title = "Pemilih";
-        return view('admin.masyarakat.pemilih', compact('data','title'));
+        return view('admin.masyarakat.pemilih', compact('data', 'title'));
+    }
+
+
+
+    // domPDF
+    public function skTidakMampu(Request $request)
+    {
+        $masyarakat = Masyarakat::firstWhere('id', $request->id);
+        $date = date('d/M/Y');
+        // return view('admin.masyarakat.sk-tidak-mampu', compact('date', 'masyarakat'));
+        $pdf = PDF::loadView('admin.masyarakat.sk-tidak-mampu', ['masyarakat' => $masyarakat]);
+        return $pdf->download('Sk-Tidak Mampu-' . $masyarakat->nama . '-' . $masyarakat->nik . '-' . $date . '.pdf');
     }
 }

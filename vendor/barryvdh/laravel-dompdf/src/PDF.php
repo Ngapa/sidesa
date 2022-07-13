@@ -228,7 +228,7 @@ class PDF
     {
         $this->render();
         $canvas = $this->dompdf->getCanvas();
-        if (! $canvas instanceof CPDF) {
+        if (!$canvas instanceof CPDF) {
             throw new \RuntimeException('Encryption is only supported when using CPDF');
         }
         $canvas->get_cpdf()->setEncryption($password, $ownerpassword, $pc);

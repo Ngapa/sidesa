@@ -57,7 +57,7 @@ class RegisterController extends Controller
         $validatedData['password'] = Hash::make($validatedData['password']);
 
         User::create($validatedData);
-        return redirect('/login')->with('success', 'Data Berhasil Ditambahkan');
+        return redirect('/login')->with('success', 'Akun Admin Berhasil Dibuat, silahkan Login');
     }
 
     /**

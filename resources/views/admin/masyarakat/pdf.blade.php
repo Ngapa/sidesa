@@ -13,6 +13,14 @@
         .text-center {
             text-align: center;
         }
+
+        table th {
+            font-size: 12px;
+        }
+
+        table td {
+            font-size: 10px;
+        }
     </style>
 
 </head>
@@ -25,7 +33,6 @@
         <thead>
             <tr>
                 <th> No </th>
-                <th> Foto</th>
                 <th> Nik </th>
                 <th> Nama Lengkap </th>
                 <th> Jenis Kelamin </th>
@@ -42,7 +49,6 @@
             @foreach ($masyarakats as $masyarakat)
                 <tr>
                     <th scope="row">{{ $no++ }}</th>
-                    <td><img width="50px" src="{{ asset('storage/' . $masyarakat->foto) }}" alt=""></td>
                     <td>{{ $masyarakat->nik }}</td>
                     <td>{{ $masyarakat->nama }}</td>
                     <td>{{ $masyarakat->jenis_kelamin }}</td>
