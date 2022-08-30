@@ -1,81 +1,25 @@
     <!-- Start Footer Area -->
     <footer class="footer">
-        <!-- Start Footer Top -->
-        <div class="footer-top">
-            <div class="container">
-                <div class="inner-content">
-                    <div class="row">
-                        <div class="col-lg-3 col-md-4 col-12">
-                            <div class="footer-logo">
-                                <a href="{{ url('/') }}">
-                                    <img src="{{ asset('landing-page/assets/images/logo/white-logo.png') }}" alt="#">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-9 col-md-8 col-12">
-                            <div class="footer-newsletter">
-                                {{-- <h4 class="title">
-                                    Subscribe to our Newsletter
-                                    <span>Get all the latest information, Sales and Offers.</span>
-                                </h4>
-                                <div class="newsletter-form-head">
-                                    <form action="#" method="get" target="_blank" class="newsletter-form">
-                                        <input name="EMAIL" placeholder="Email address here..." type="email">
-                                        <div class="button">
-                                            <button class="btn">Subscribe<span class="dir-part"></span></button>
-                                        </div>
-                                    </form>
-                                </div> --}}
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Footer Top -->
         <!-- Start Footer Middle -->
         <div class="footer-middle">
             <div class="container">
                 <div class="bottom-inner">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-12">
+                        <div class="col-lg-4 col-md-12 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-contact">
-                                <h3>Desa Konohagakure</h3>
-                                <p class="phone">Desa Konohagakure adalah desa yang berada di Kecamatan Naga, Kabupaten Singa, Bangunsaja.</p>
+                                <h3>Desa Mulyasari</h3>
+                                <p class="phone">Desa Mulyasari adalah desa yang berada di Kecamatan Majenang, Kabupaten Cilacap, Jawa Tengah.</p>
                                 <ul>
                                     <li><span>Phone : </span>(+100) 123 456 7890</li>
                                 </ul>
                                 <p class="mail">
-                                    <a href="#">konohagakure@support.com</a>
+                                    <a href="#">mulyasari@support.com</a>
                                 </p>
                             </div>
                             <!-- End Single Widget -->
                         </div>
-                        <div class="col-lg-3 col-md-6 col-12">
-                            <!-- Single Widget -->
-                            <div class="single-footer our-app">
-                                <h3>Our Mobile App</h3>
-                                <ul class="app-btn">
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <i class="lni lni-apple"></i>
-                                            <span class="small-title">Download on the</span>
-                                            <span class="big-title">App Store</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0)">
-                                            <i class="lni lni-play-store"></i>
-                                            <span class="small-title">Download on the</span>
-                                            <span class="big-title">Google Play</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <!-- End Single Widget -->
-                        </div>
-                        <div class="col-lg-3 col-md-6 col-12">
+                        <div class="col-lg-4 col-md-12 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-link">
                                 <h3>Information</h3>
@@ -89,7 +33,7 @@
                             </div>
                             <!-- End Single Widget -->
                         </div>
-                        <div class="col-lg-3 col-md-6 col-12">
+                        <div class="col-lg-4 col-md-12 col-12">
                             <!-- Single Widget -->
                             <div class="single-footer f-contact">
                                 <h3>Get In Touch With Us</h3>
@@ -122,7 +66,7 @@
                         </div>
                         <div class="col-lg-4 col-12">
                             <div class="copyright">
-                                <p>Designed and Developed by<a href="" rel="nofollow" target="_blank">NF Computer X Campus Merdeka</a></p>
+                                <p>Designed and Developed by<a href="stmikkomputamamajenang.ac.id" rel="nofollow" target="_blank">STMIK Komputama Majenang</a></p>
                             </div>
                         </div>
                         <div class="col-lg-4 col-12">
