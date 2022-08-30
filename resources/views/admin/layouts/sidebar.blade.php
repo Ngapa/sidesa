@@ -10,7 +10,7 @@
         </div>
         <ul class="nav flex-column pt-3 pt-md-0">
             <a class="navbar-brand mt-3 mb-4" href="{{ url('/admin/dashboard') }}">
-                <img src="{{ asset('admin/assets/img/logo/logo.png') }}" class="w-75 h-75" alt="Logo" />
+                <span class='h3'>ADMINISTRATOR</span>
             </a>
 
             <li class="nav-item">

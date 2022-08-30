@@ -8,7 +8,6 @@
                     <div class="top-middle">
                         <ul class="useful-links">
                             <li><a href="{{ url('/') }}">Home</a></li>
-                            <li><a href="{{ url('/about') }}">About Us</a></li>
                             <li><a href="{{ url('/contact') }}">Contact Us</a></li>
                         </ul>
                     </div>
@@ -50,7 +49,7 @@
                 <div class="col-lg-3 col-md-3 col-7">
                     <!-- Start Header Logo -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <img src="{{ asset('landing-page/assets/images/logo/logo.png') }}" alt="Logo">
+                        <h1>Desa Mulyasari</h1>
                     </a>
                     <!-- End Header Logo -->
                 </div>
@@ -110,7 +109,7 @@
                         <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                             <ul id="nav" class="navbar-nav ms-auto">
 
-
+                                
                                 <li class="nav-item">
                                     <a href="{{ url('/') }}" aria-label="Toggle navigation">Utama</a>
                                 </li>
@@ -143,6 +142,9 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="{{ url('/contact') }}"  aria-label="Toggle navigation">Contact Us</a>
+                                </li>
                                 {{-- <li class="nav-item">
                                         <a href="" aria-label="Toggle navigation">Inventaris</a>
                                     </li> --}}
@@ -163,7 +165,32 @@
                     <!-- End Navbar -->
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-12">
+            <div class="col-lg-3 col-md-4 col-12">
+                <div class="top-end">
+                    @auth
+                        <div class="user">
+                            <i class="lni lni-user"></i>
+                            Selamat Datang, {{ auth()->user()->username }} >>
+                        </div>
+                        <ul class="user-login">
+                            <li>
+                                <a href="{{ url('/admin/dashboard') }}">Dashboard</a>
+                            </li>
+                        @else
+                            <div class="user">
+                                <i class="lni lni-user"></i>
+                                Harap Login >>
+                            </div>
+                            <ul class="user-login">
+                                <li>
+                                    <a href="{{ url('/login') }}">Login</a>
+                                </li>
+                            </ul>
+                        @endauth
+                    </ul>
+                </div>
+            </div>
+            {{--<div class="col-lg-3 col-md-6 col-12">
                 <!-- Start Nav Social -->
                 <div class="nav-social">
                     <h5 class="title">Ikuti Kami:</h5>
@@ -183,7 +210,7 @@
                     </ul>
                 </div>
                 <!-- End Nav Social -->
-            </div>
+            </div>--}}
         </div>
     </div>
     <!-- End Header Bottom -->
