@@ -26,11 +26,11 @@
                         <div class="product-info">
                             <span class="category">Aktif</span>
                             <h4 class="title">
-                                <a href="product-grids.html">Setya Budi Santoso</a>
+                                <a href="product-grids.html">TOHARI</a>
                             </h4>
-                            <p>Tangerang, 06 April 1987</p>
+                            <p>CILACAP, 15 MEI 1978</p>
                             <div class="price">
-                                <span>Kepala Desa</span>
+                                <span>KEPALA DESA</span>
                             </div>
                         </div>
                     </div>
@@ -48,11 +48,11 @@
                         <div class="product-info">
                             <span class="category">Aktif</span>
                             <h4 class="title">
-                                <a href="product-grids.html">Muhamad Sarwadi</a>
+                                <a href="product-grids.html">AKBAR SANDI PERDANA, Amd.Kl</a>
                             </h4>
-                            <p>Tangerang, 06 April 1987</p>
+                            <p>CILACAP, 16 OKTOBER 1994</p>
                             <div class="price">
-                                <span>Sekertaris Desa</span>
+                                <span>SEKRETARIS DESA</span>
                             </div>
                         </div>
                     </div>
@@ -70,11 +70,11 @@
                         <div class="product-info">
                             <span class="category">Aktif</span>
                             <h4 class="title">
-                                <a href="product-grids.html">Dadang Darusman</a>
+                                <a href="product-grids.html">MUSIRAN</a>
                             </h4>
-                            <p>Tangerang, 06 April 1987</p>
+                            <p>CILACAP, 22 SEPTEMBER 1977</p>
                             <div class="price">
-                                <span>Kaur Keuangan</span>
+                                <span>KASI PEMERINTAHAN</span>
                             </div>
                         </div>
                     </div>
@@ -92,11 +92,11 @@
                         <div class="product-info">
                             <span class="category">Aktif</span>
                             <h4 class="title">
-                                <a href="product-grids.html">Fifi Alfisah</a>
+                                <a href="product-grids.html">MUFROIL</a>
                             </h4>
-                            <p>Tangerang, 06 April 1987</p>
+                            <p>CILACAP, 16 JULI 1971</p>
                             <div class="price">
-                                <span>Kaur Tata Usaha</span>
+                                <span>KASI KESEJAHTERAAN</span>
                             </div>
                         </div>
                     </div>
@@ -114,11 +114,11 @@
                         <div class="product-info">
                             <span class="category">Aktif</span>
                             <h4 class="title">
-                                <a href="product-grids.html">Aripin</a>
+                                <a href="product-grids.html">PURWANTI</a>
                             </h4>
-                            <p>Tangerang, 06 April 1987</p>
+                            <p>CILACAP, 20 JANUARI 1969</p>
                             <div class="price">
-                                <span>Kaur Perencanaan</span>
+                                <span>KASI PELAYANAN</span>
                             </div>
                         </div>
                     </div>
@@ -136,11 +136,11 @@
                         <div class="product-info">
                             <span class="category">Aktif</span>
                             <h4 class="title">
-                                <a href="product-grids.html">Ruslin</a>
+                                <a href="product-grids.html">WINNY MAWARWATI</a>
                             </h4>
-                            <p>Tangerang, 06 April 1987</p>
+                            <p>CILACAP, 04 NOVEMBER 1970</p>
                             <div class="price">
-                                <span>Kasi Pelayanan</span>
+                                <span>KAUR UMUM DAN PERENCANAAN</span>
                             </div>
                         </div>
                     </div>
@@ -158,11 +158,11 @@
                         <div class="product-info">
                             <span class="category">Aktif</span>
                             <h4 class="title">
-                                <a href="product-grids.html">Suhendri</a>
+                                <a href="product-grids.html">TUGIYANTI</a>
                             </h4>
-                            <p>Tangerang, 06 April 1987</p>
+                            <p>CILACAP, 25 SEPTEMBER 1986</p>
                             <div class="price">
-                                <span>Kasi Pemerintahan</span>
+                                <span>KAUR KEUANGAN</span>
                             </div>
                         </div>
                     </div>
@@ -180,11 +180,165 @@
                         <div class="product-info">
                             <span class="category">Aktif</span>
                             <h4 class="title">
-                                <a href="product-grids.html">Mohamad Ridwan</a>
+                                <a href="product-grids.html">ANGGUN WAHYUDI</a>
                             </h4>
-                            <p>Tangerang, 06 April 1987</p>
+                            <p>CILACAP, 07 FEBRUARI 1981</p>
                             <div class="price">
-                                <span>Kasi Kesejahteraan</span>
+                                <span>KADUS KENANGASARI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/335x335" alt="#">
+                            <div class="button">
+                                <a href="#" class="btn"><i class="lni lni-phone"></i> Hubungi</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Aktif</span>
+                            <h4 class="title">
+                                <a href="product-grids.html">ADI PRIYANTO</a>
+                            </h4>
+                            <p>CILACAP, 22 SEPTEMBER 1979</p>
+                            <div class="price">
+                                <span>KADUS PERUMNAS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/335x335" alt="#">
+                            <div class="button">
+                                <a href="#" class="btn"><i class="lni lni-phone"></i> Hubungi</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Aktif</span>
+                            <h4 class="title">
+                                <a href="product-grids.html">WAGIYO</a>
+                            </h4>
+                            <p>CILACAP, 19 APRIL 1971</p>
+                            <div class="price">
+                                <span>KADUS CEMPAKA SARI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/335x335" alt="#">
+                            <div class="button">
+                                <a href="#" class="btn"><i class="lni lni-phone"></i> Hubungi</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Aktif</span>
+                            <h4 class="title">
+                                <a href="product-grids.html">AKHMAD MUHTAR</a>
+                            </h4>
+                            <p>CILACAP, 21 MARET 1971</p>
+                            <div class="price">
+                                <span>KADUS BOJONGSARI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/335x335" alt="#">
+                            <div class="button">
+                                <a href="#" class="btn"><i class="lni lni-phone"></i> Hubungi</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Aktif</span>
+                            <h4 class="title">
+                                <a href="product-grids.html">ROMADHONI ADITAMA</a>
+                            </h4>
+                            <p>CILACAP, 05 JUNI 1984</p>
+                            <div class="price">
+                                <span>KADUS DANASARI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/335x335" alt="#">
+                            <div class="button">
+                                <a href="#" class="btn"><i class="lni lni-phone"></i> Hubungi</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Aktif</span>
+                            <h4 class="title">
+                                <a href="product-grids.html">SUTRISNO AL SAMAN</a>
+                            </h4>
+                            <p>CILACAP, 02 JUNI 1962</p>
+                            <div class="price">
+                                <span>KADUS PAKISHAJI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/335x335" alt="#">
+                            <div class="button">
+                                <a href="#" class="btn"><i class="lni lni-phone"></i> Hubungi</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Aktif</span>
+                            <h4 class="title">
+                                <a href="product-grids.html">NUR SOLEHAN</a>
+                            </h4>
+                            <p>CILACAP, 11 APRIL 1964</p>
+                            <div class="price">
+                                <span>KADUS REJASARI</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Product -->
+                </div>
+                <div class="col-lg-3 col-md-6 col-12">
+                    <!-- Start Single Product -->
+                    <div class="single-product">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/335x335" alt="#">
+                            <div class="button">
+                                <a href="#" class="btn"><i class="lni lni-phone"></i> Hubungi</a>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="category">Aktif</span>
+                            <h4 class="title">
+                                <a href="product-grids.html">BUDI SETIAWAN</a>
+                            </h4>
+                            <p>CILACAP, 11 SEPTEMBER 1996</p>
+                            <div class="price">
+                                <span>KADUS KAWUNGSARI</span>
                             </div>
                         </div>
                     </div>

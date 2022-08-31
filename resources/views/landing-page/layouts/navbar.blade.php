@@ -49,7 +49,7 @@
                 <div class="col-lg-3 col-md-3 col-7">
                     <!-- Start Header Logo -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        <h1>Desa Mulyasari</h1>
+                        <h2>Desa Mulyasari</h2>
                     </a>
                     <!-- End Header Logo -->
                 </div>
@@ -130,16 +130,6 @@
                                         <li class="nav-item"><a href="{{ url('/visi-misi') }}">Visi &
                                                 Misi</a></li>
                                         <li class="nav-item"><a href="{{ url('/dana') }}">Dana</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
-                                        data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent"
-                                        aria-expanded="false" aria-label="Toggle navigation">Lainnya</a>
-                                    <ul class="sub-menu collapse" id="submenu-1-3">
-                                        <li class="nav-item"><a href="{{ url('/about') }}">Tentang</a></li>
-                                        <li class="nav-item"><a href="{{ url('/contact') }}">Hubungi</a>
-                                        </li>
                                     </ul>
                                 </li>
                                 <li class="nav-item">

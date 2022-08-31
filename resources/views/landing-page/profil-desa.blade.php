@@ -16,17 +16,13 @@
                 <div class="col-lg-6 col-md-12 col-12">
                     <!-- content-1 start -->
                     <div class="content-right">
-                        <h2>Konoha - Your Trusted & Reliable Partner.</h2>
-                        <p>Geografi desa merupakan cabang geografi yang mengkhususkan diri pada study pedesaan. Desa
-                            merupakan obyek studi yang dikaji dari sudut pandang geografi yaitu pendekatan keruangan,
-                            pendekatan ekologi dan pendekatan komplek wilayah. Geografi desa sebagai sub disiplin geografi
-                            belum lama yaitu baru pada masa dasa warsa 1960-an. Hal ini disebabkan perhatian yang agak
-                            kurang terhadap masalah kemiskinan di daerah pedesaan negara-negara berkembang.
-                        </p>
-                        <p>Bidang kajian berkembang dengan pesat sesuai dengan umurnya yang masih muda. Problem utama yang
-                            muncul adalah pendefinisian baik pengertian geografi desa maupun pengertian desa. Geografi desa
-                            mengutamakan kajian dengan pendekatan geografi sedangkan desa dari sudut pandang geografi
-                            merupakan suatu wilayah.</p>
+                        <h2>Sejarah Desa Mulyasari</h2>
+                        <p>Konon menurut  cerita dari sejarawan dan pemerhati sejarah yang berasal dari Desa Mulyasari yang ceritanya diteruskan secara turun temurun asal mula Desa Mulyasari berawal dari kondisi alam secara geografis dimana waktu dulu Desa Mulyasari merupakan pecahan Desa Sindangsari wilayah dataran rendah dimana tanahnya antara lain terdiri dari tanah darat dan rawa.</p>
+                        <p>
+                        Kata Mulyasari di antaranya adalah berasal dari bahasa Jawa, Sunda, Sansekerta, karaktristik yang masing-masing mempunyai makna yang berbeda. Mulya yang berarti : Terhormat, Terpandang, Mulia . Sari yang berarti : Indah, Inti</p>
+                        <p>
+                        Desa Mulyasari sendiri hadir dan diberi nama demikian sangat erat sekali dengan masyarakat. Pada 1 Januari tahun 1991  setelah Pemecahan / Pemekaran dari Desa Sindangsari pada saat itu pertama bermusyawarah dengan para tokoh masyarakat, sesepuh Desa dan orang-orang berpengaruh di tingkat Desa kemudian nama Mulyasari di persiapkan untuk di jadikan nama Desa yang sampai saat ini di gunakan.</p>
+                        <p>Sejak berdiri Desa Mulyasari sudah terdiri dari 8 Dusun yakni Dusun Kenangasari, Dusun Perumnas, Dusun Cempakasari, Dusun Bojongsari, Dusun Danasari, Dusun Pakishaji, Dusun Rejasari, Dusun Kawungsari yang dikemudian saat ini di kenal dengan Kepala Dusun (Kadus).</p>
                     </div>
                 </div>
             </div>

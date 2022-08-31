@@ -8,48 +8,14 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="section-title">
-                            <h2>Hubungu Kami</h2>
+                            <h2>Hubungi Kami</h2>
                             <p>silahkan isi form untuk mengirim pesan kepada admin desa.</p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-info">
                     <div class="row">
-                        <div class="col-lg-4 col-md-12 col-12">
-                            <div class="single-info-head">
-                                <!-- Start Single Info -->
-                                <div class="single-info">
-                                    <i class="lni lni-map"></i>
-                                    <h3>Address</h3>
-                                    <ul>
-                                        <li>44 Shirley Ave. West Chicago,<br> IL 60185, USA.</li>
-                                    </ul>
-                                </div>
-                                <!-- End Single Info -->
-                                <!-- Start Single Info -->
-                                <div class="single-info">
-                                    <i class="lni lni-phone"></i>
-                                    <h3>Call us on</h3>
-                                    <ul>
-                                        <li><a href="tel:+18005554400">+1 800 555 44 00 (Toll free)</a></li>
-                                        <li><a href="tel:+321556667890">+321 55 666 7890</a></li>
-                                    </ul>
-                                </div>
-                                <!-- End Single Info -->
-                                <!-- Start Single Info -->
-                                <div class="single-info">
-                                    <i class="lni lni-envelope"></i>
-                                    <h3>Mail at</h3>
-                                    <ul>
-                                        <li><a href="mailto:support@shopgrids.com">support@shopgrids.com</a>
-                                        </li>
-                                        <li><a href="mailto:career@shopgrids.com">career@shopgrids.com</a></li>
-                                    </ul>
-                                </div>
-                                <!-- End Single Info -->
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-12 col-12">
+                        <div class="col-lg-12 col-md-12 col-12">
                             <div class="contact-form-head">
                                 @if (Session::has('success'))
                                     <div class="alert alert-success">

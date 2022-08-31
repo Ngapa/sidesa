@@ -11,32 +11,32 @@
                         <div class="hero-slider">
                             <!-- Start Single Slider -->
                             <div class="single-slider"
-                                style="background-image: url({{ asset('landing-page/assets/images/hero/slide1.png') }});">
+                                style="background-image: url({{ asset('landing-page/assets/images/hero/slide1.jpg') }});">
                                 <div class="content">
-                                    <h2><span class="text-white">Sebanyak 452 KPM Warga Desa muara</span>
-                                        Mendapatkan Bantuan langsung Tunai Tahap ll Kemesos RI
+                                    <h2><span class="text-white">Warga Desa Mulyasari</span>
+                                        Melaksanakan Vaksinasi Jenis Pzifer di Balai Desa Mulyasari
                                     </h2>
                                     <p class="text-white">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod
                                         tempor incididunt ut
                                         labore dolore magna aliqua.</p>
                                     <div class="button">
-                                        <a href="product-grids.html" class="btn">Selengkapnya</a>
+                                        <a href="" class="btn">Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>
                             <!-- End Single Slider -->
                             <!-- Start Single Slider -->
                             <div class="single-slider"
-                                style="background-image: url({{ asset('landing-page/assets/images/hero/slide2.png') }});">
+                                style="background-image: url({{ asset('landing-page/assets/images/hero/slide2.jpg') }});">
                                 <div class="content">
-                                    <h2><span class="text-white">Warga Desa Muara Mulai Mendapatkan</span>
-                                        Bantuan Langsung Tunai dari BLT Desa Muara.
+                                    <h2><span class="text-white">Warga Desa Mulyasari Mengikuti</span>
+                                        Musyawarah Desa di Balai Desa
                                     </h2>
                                     <p class="text-white">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod
                                         tempor incididunt ut
                                         labore dolore magna aliqua.</p>
                                     <div class="button">
-                                        <a href="product-grids.html" class="btn">Selengkapnya</a>
+                                        <a href="" class="btn">Selengkapnya</a>
                                     </div>
                                 </div>
                             </div>

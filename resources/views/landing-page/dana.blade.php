@@ -81,7 +81,6 @@
                                 <td>{{ $dk->dana->nama }}</td>
                                 <td>{{ (new DateTime($dk->waktu))->format('d, D M Y') }}</td>
                                 <td>@money($dk->jumlah)</td>
-                                <td>{{ $dk->user->masyarakat->nama }}</td>
                                 <td>{{ $dk->keterangan }}</td>
                             </tr>
                         @endforeach
