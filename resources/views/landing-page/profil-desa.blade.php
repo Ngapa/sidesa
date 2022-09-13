@@ -8,9 +8,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-12 col-12">
                     <div class="content-left">
-                        <img src="https://via.placeholder.com/540x420" alt="#">
-                        <a href="https://www.youtube.com/watch?v=r44RKWyfcFw&fbclid=IwAR21beSJORalzmzokxDRcGfkZA1AtRTE__l5N4r09HcGS5Y6vOluyouM9EM"
-                            class="glightbox video"><i class="lni lni-play"></i></a>
+                        <img src="{{ asset('landing-page/assets/images/hero/desa.jpg') }}" alt="#">
+                        <a href="https://www.youtube.com/watch?v=-3ZY3OSOupw"
+                            class="glightbox video" target="_blank"><i class="lni lni-play"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12 col-12">
