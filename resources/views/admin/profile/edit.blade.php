@@ -4,13 +4,13 @@
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-4 pb-4">
         <div class="d-block mb-4 mb-md-0">
 
-            <h2 class="h4">Update Profil</h2>
-            <p class="mb-0">Your web analytics dashboard template.</p>
+            <h2 class="h4">Perbarui Profil</h2>
+            <!-- <p class="mb-0">Your web analytics dashboard template.</p> -->
         </div>
         <div class="btn-toolbar mb-2 mb-md-0">
             <a href="{{ url('/admin/profile') }}" class="btn btn-sm bg-core text-white d-inline-flex align-items-center">
                 <i class="lni lni-chevron-left me-2"></i>
-                Back
+                Kembali
             </a>
 
         </div>
@@ -31,16 +31,16 @@
 
     <div class="col-xxl">
         <div class="card mb-4">
-            <div class="card-header d-flex align-items-center justify-content-between">
+            <!-- <div class="card-header d-flex align-items-center justify-content-between">
                 <h5 class="mb-0">Update Forms</h5>
                 <small class="text-muted float-end">Form </small>
-            </div>
+            </div> -->
             <div class="card-body">
                 <form method="POST" action="{{ route('users.update', $user->id) }}">
                     @method('PUT')
                     @csrf
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Username</label>
+                        <label class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-10">
                             <div class="input-group input-group-merge">
                                 <span id="basic-icon-default-fullname2" class="input-group-text"><i
@@ -108,7 +108,7 @@
 
                     <div class="row justify-content-end">
                         <div class="col-sm-10">
-                            <button type="submit" class="btn bg-core text-white">Submit</button>
+                            <button type="submit" class="btn bg-core text-white" style="position : center; ">Submit</button>
                         </div>
                     </div>
                 </form>

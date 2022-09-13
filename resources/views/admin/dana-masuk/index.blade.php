@@ -56,7 +56,6 @@
                                 <td>{{ $dm->dana->nama }}</td>
                                 <td>@money($dm->jumlah)</td>
                                 <td>{{ (new DateTime($dm->waktu))->format('d, D M Y') }}</td>
-                                <td>{{ $dm->user->masyarakat->nama }}</td>
                                 <td>
                                     <textarea cols="20" rows="1" class="text-area-style" disabled>{{ $dm->keterangan }}</textarea>
                                 </td>
